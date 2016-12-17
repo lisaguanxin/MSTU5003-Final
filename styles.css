@@ -1,0 +1,14 @@
+#myItems > li {
+	display: none;
+}
+
+#myItems > li.shownItem {
+	display: block;
+}
+
+.item-feedback {
+	display: none;
+}
+.item-feedback.showFeedback {
+	display: block;
+}
