@@ -1,7 +1,6 @@
-//how to realzie click --> show the new step btn?
-//Write the function of btn showing when clicking on btn YES/NOT SURE;
-//listen to YES or NotSure;
-//how to hide the content until clicking on the btn? DOM Animation included?
+//hide the chat box
+//onlclick
+
 
 function myStep1() {
   document.getElementById("step1");
@@ -37,4 +36,24 @@ document.getElementById('myItems').addEventListener('click', function(event){
 	} else {
 		// do nothing
 	}
+});
+var messageList=[];
+var userMsg="xxx";
+
+document.querySelector('#postBtn').addEventListener('click', function(){
+	userMsg = document.querySelector('#userText').value;
+	messageList.push(userMsg);
+	console.log(messageList);
+
+	var el = document.createElement('P'); // <p></p>
+			el.innerText = userMsg;			// <p>Message here</p>
+
+	document.querySelector('#messages').appendChild(el);
+
+
+	document.querySelector('#userText').value = "";
+});
+
+document.$('.material-icons').addEventListener('click',function(){
+  alert("If u have any question, pls send email to xg2242@tc.columbia.edu");
 });
